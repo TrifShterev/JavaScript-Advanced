@@ -16,78 +16,19 @@
             <li class="good">Superman</li>
             <li class="good">Captain America</li>
             <li class ="evil">Darkseid</li>
+            <li class ="evil">Thanos</li>
+            <li class ="good">Iron Man</li>
         </ul>
+        <button id="toggle-heroes-btn" onclick="toggleSuperHeroes();">Hide</button>
+<br />
+
 <label for="superhero-input">Add Superhero</label>
 <input type="text" id="superhero-input" />
         <button id="superHero" onclick="addSuperhero();">Add</button>
     </section>
     </div>
-    <script>
-        //change heading
-let elementHeading = document.getElementById('superhero-list-header')
-//let addSuperheroElement = document.getElementById('superhero');
-elementHeading.textContent += ' Marvel DC';
-
-// show innerHtml or textContent
-let section = document.getElementById('superheroes-section');
-let sectionText = document.getElementById('superheroes-section');
-console.log(section.textContent);
-console.log(section.innerHTML);
-
-//change Background
-let siteWrapper = document.getElementById('wrapper');
-siteWrapper.style.backgroundColor = 'lightblue';
-
-//Add value from input 
-function addSuperhero() {
-let superHeroInputNameElement = document.getElementById('superhero-input')
-console.log(superHeroInputNameElement.value);
-
-//Delete the value from the input field once we press "Add"
-superHeroInputNameElement.value='';
-}
-
-//Targeting elements by class returns HtmlCollection
-let goodHeroesLiElements = document.getElementsByClassName('good');
-console.log(goodHeroesLiElements);
-goodHeroesLiElements[0].textContent += ' The Strongest Avenger';//Here we modify the 1 element of the HtmlCollection
-
-//Targeting elements by tag - takes all the elementsof the tag name
-let allLiElements = document.getElementsByTagName('li');
-console.log(allLiElements);
-
-//Targeting elements by querySelectors returns NodeList
-let returnsFirstLiElement = document.querySelector('li');
-let returnsAllLiElements = document.querySelectorAll('li');
-let returnsAllLiElementsByListIdAndThenClassName = document.querySelectorAll('#superhero-list .good');
-console.log(returnsFirstLiElement)
-console.log(returnsAllLiElements)
-console.log(returnsAllLiElementsByListIdAndThenClassName)
-
-let allSuperHeroesLiElements = document.querySelectorAll('#superhero-list li');
-
-allSuperHeroesLiElements.forEach((x) =>{ //Doesn't work in JUDGE
-    console.log(x.textContent)
-} )
-
-for (const hero of allSuperHeroesLiElements) {
-    console.log('Superhero: ', hero.textContent);
-}
-
-//Convert HtmlCollection and NodeList to JS Array
-let superheroesJsArray = Array.from(allSuperHeroesLiElements);
-let superheroesJsArray2 = [...allSuperHeroesLiElements];
-
-console.log(superheroesJsArray);
-
-//Get parent element - change background color of the body element
-
-let bodyElement =  siteWrapper.parentElement;
-bodyElement.style.backgroundColor ='lightblue';
-
-
-
-    </script>
+    <script src="./script.js"></script>
+    
    
 </body>
 </html>
