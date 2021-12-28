@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>JS Dom</h1> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, saepe! </p>
+    <section id="superheroes-section">
+        <h3 id="superhero-list-header">Superheroes</h3>
+        <ul id="superhero-list">
+            <li>Superman</li>
+            <li>Captain America</li>
+            <li>Darkseid</li>
+        </ul>
+<label for="superhero-input">Add Superhero</label>
+<input type="text" id="superhero-input" />
+        <button id="superHero" onclick="addSuperhero();">Add</button>
+    </section>
+    </div>
+    <script>
+        //change heading
+let elementHeading = document.getElementById('superhero-list-header')
+//let addSuperheroElement = document.getElementById('superhero');
+elementHeading.textContent += ' Marvel DC';
+
+// show innerHtml or textContent
+let section = document.getElementById('superheroes-section');
+let sectionText = document.getElementById('superheroes-section');
+console.log(section.textContent);
+console.log(section.innerHTML);
+
+//change Background
+let siteWrapper = document.getElementById('wrapper');
+siteWrapper.style.backgroundColor = 'lightblue';
+
+//Add value from input 
+function addSuperhero() {
+let superHeroInputNameElement = document.getElementById('superhero-input')
+console.log(superHeroInputNameElement.value);
+
+//Delete the value from the input field once we press "Add"
+superHeroInputNameElement.value='';
+}
+    </script>
+   
+</body>
+</html>
