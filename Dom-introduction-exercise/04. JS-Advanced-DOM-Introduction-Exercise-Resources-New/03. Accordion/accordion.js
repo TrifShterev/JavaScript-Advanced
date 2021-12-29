@@ -11,4 +11,8 @@ function toggle() {
         text.style.display = 'none';
         btn.textContent = 'More';
     }
+
+    //Second solution with ternary operator:
+    // btn.textContent = 'More' ? 'Less' : 'More';
+    // text.style.display = text.style.display == 'block' ? 'none' : 'block';
 }
