@@ -3,10 +3,10 @@ function solve() {
     let output = document.querySelector('textarea');
     let cart = [];
    //get the buttons and add event listeners 
-   let shoppingCart = document.getElementsByClassName('shopping-cart')[0]
-      .addEventListener('click', onClick);
+  document.querySelector('.shopping-cart')
+    .addEventListener('click', onClick);
 
-  let checkoutBtn = document.getElementsByClassName('checkout')[0]
+  document.querySelector('.checkout')
       .addEventListener('click', checkout);
      
 
@@ -42,7 +42,7 @@ function solve() {
 
       //After clicking over "Checkout" and every from above is done you should disable all buttons
       //TODO
-
+e.target.removeEventListener("click",checkout);
    }
 
 
