@@ -41,7 +41,7 @@ function solve() {
       output.value += `You bought ${[...products.keys()].join(', ')} for ${total.toFixed(2)}.`
 
       //After clicking over "Checkout" and every from above is done you should disable all buttons
-      //TODO
+      
 e.target.removeEventListener("click",checkout);
    }
 
