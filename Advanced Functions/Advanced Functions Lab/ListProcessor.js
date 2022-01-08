@@ -27,7 +27,7 @@ for (const item of arr) {
 
     function add(element){
         result.push(element);
-        return result;
+       
     }
     function remove(element){
        
@@ -37,7 +37,7 @@ for (const item of arr) {
                 result.splice(i, 1);
             }
         }
-        return result;
+      
     }
     function print(){
         console.log(result);
