@@ -1,4 +1,10 @@
 function notify(message) {
-  console.log('todo')
-  // TODO:
+  let notified = document.querySelector('#notification');
+  notified.textContent = message;
+  notified.style.display = 'block';
+
+  notified.addEventListener('click',(e) => {
+    e.target.style.display='none'
+  })
+
 }
